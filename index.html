@@ -81,6 +81,40 @@
       margin-top: 12px;
       color: #ff5c5c;
     }
+
+    /* Social icons */
+    .social {
+      margin-top: 18px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social a {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      color: white;
+      text-decoration: none;
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+
+    .social a:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .social svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+      display: block;
+    }
   </style>
 </head>
 
@@ -99,6 +133,29 @@
   <div class="box" id="content" style="display:none;">
     <h1>Mohammed Shah</h1>
     <p>Digital • Marketing • Tech</p>
+
+    <div class="social" aria-label="social links">
+      <!-- Replace href="#" with your profile URLs -->
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.28 4.28 0 0 0 1.88-2.37 8.55 8.55 0 0 1-2.71 1.03 4.26 4.26 0 0 0-7.26 3.88A12.1 12.1 0 0 1 3.15 4.9a4.26 4.26 0 0 0 1.32 5.69c-.64 0-1.24-.2-1.77-.49v.05c0 2.1 1.5 3.85 3.5 4.25-.37.1-.76.15-1.16.15-.28 0-.55-.03-.81-.08.55 1.7 2.14 2.94 4.03 2.97A8.55 8.55 0 0 1 2 19.54a12.08 12.08 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2v-.56A8.72 8.72 0 0 0 24 5.6a8.5 8.5 0 0 1-2.54.7z"/></svg>
+      </a>
+
+      <a href="#" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.88 2.88 0 1 1 0 5.75 2.88 2.88 0 0 1 0-5.75zM3 9h4v12H3zM10 9h3.78v1.63h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.66 4.78 6.12V21H18v-5.2c0-1.24-.02-2.84-1.73-2.84-1.74 0-2.01 1.36-2.01 2.76V21h-4V9z"/></svg>
+      </a>
+
+      <a href="#" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.26 3.4.97.11-.76.41-1.26.74-1.55-2.56-.29-5.25-1.28-5.25-5.72 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.19a11 11 0 0 1 5.77 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.58.23 2.75.11 3.04.74.81 1.19 1.85 1.19 3.11 0 4.45-2.7 5.43-5.27 5.71.42.36.8 1.08.8 2.18 0 1.57-.01 2.83-.01 3.21 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+
+      <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm6-1.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 9.3a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4z"/></svg>
+      </a>
+
+      <a href="#" aria-label="Mastodon" title="Mastodon" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 13.6c-.1-4.3-3.9-7.8-8.2-7.9h-.3c-4.3.1-8 3.6-8.2 7.9-.2 4.6 1.8 7.8 6.2 8.4 0 .6 0 1.4-.1 2.3 0 .4.2.6.6.5 3.5-1 6-2.8 7.6-5.5 1.2-2.1 1.6-4.1 1.4-6.1zM15 17.3c-.5.9-1.7 1.9-3.4 2.8-.4-.6-.6-1.4-.8-2.2-1.8-.2-3.4-1-3.8-2.3.5-.1 1.1-.1 1.6 0 1.1.2 2.7.5 5.2 1.7z"/></svg>
+      </a>
+    </div>
   </div>
 
   <script>
