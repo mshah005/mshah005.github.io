@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .box {
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px 15px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" id="login">
+    <h2>Enter Password</h2>
+    <input type="password" id="pw">
+    <button onclick="check()">Enter</button>
+    <p id="err"></p>
+  </div>
+
+  <div class="box" id="content" style="display:none;">
+    <h1>Mohammed</h1>
+    <p>Digital / Marketing / Tech</p>
+    <p>
+      <a href="https://instagram.com/YOURNAME" style="color:white;">Instagram</a><br>
+      <a href="https://linkedin.com/in/YOURNAME" style="color:white;">LinkedIn</a>
+    </p>
+  </div>
+
+  <script>
+    function check() {
+      if (document.getElementById("pw").value === "1234") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        document.getElementById("err").innerText = "Wrong password";
+      }
+    }
+  </script>
+</body>
+</html>
