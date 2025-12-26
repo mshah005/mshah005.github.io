@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome</title>
+  <title>Mohammed Shah</title>
   <style>
     body {
       margin: 0;
@@ -15,14 +15,13 @@
 
       background: linear-gradient(
         -45deg,
-        #1e3c72,
-        #2a5298,
-        #0f2027,
-        #203a43,
-        #2c5364
+        #0f0f0f,
+        #1a1a1a,
+        #0b0b0b,
+        #1c1c1c
       );
       background-size: 400% 400%;
-      animation: gradientBG 12s ease infinite;
+      animation: gradientBG 14s ease infinite;
     }
 
     @keyframes gradientBG {
@@ -32,34 +31,49 @@
     }
 
     .box {
-      background: rgba(0, 0, 0, 0.35);
-      padding: 30px 40px;
-      border-radius: 12px;
+      background: rgba(20, 20, 20, 0.75);
+      padding: 35px 45px;
+      border-radius: 14px;
       text-align: center;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
       animation: fadeIn 1s ease;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
+    h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-bottom: 15px;
+      opacity: 0.85;
+    }
+
     input {
-      padding: 10px;
+      padding: 11px;
       border-radius: 6px;
       border: none;
       outline: none;
       margin-top: 10px;
+      background: #111;
+      color: white;
     }
 
     button {
-      padding: 10px 16px;
+      padding: 11px 18px;
       margin-left: 6px;
       border-radius: 6px;
       border: none;
       cursor: pointer;
-      background: white;
+      background: #e5e5e5;
       color: black;
       font-weight: bold;
     }
@@ -69,13 +83,18 @@
     }
 
     a {
-      color: white;
+      color: #e5e5e5;
       text-decoration: none;
       font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    #err {
+      margin-top: 10px;
+      color: #ff6b6b;
     }
   </style>
 </head>
@@ -84,6 +103,7 @@
 
   <!-- LOGIN -->
   <div class="box" id="login">
+    <h1>Mohammed Shah</h1>
     <h2>Enter Password</h2>
     <input type="password" id="pw" placeholder="Password">
     <button onclick="check()">Enter</button>
@@ -92,7 +112,7 @@
 
   <!-- CONTENT -->
   <div class="box" id="content" style="display:none;">
-    <h1>Mohammed</h1>
+    <h1>Mohammed Shah</h1>
     <p>Digital • Marketing • Tech</p>
 
     <p>
