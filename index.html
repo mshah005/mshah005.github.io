@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mohammed Shah</title>
+
   <style>
     body {
       margin: 0;
@@ -15,110 +16,89 @@
 
       background: linear-gradient(
         -45deg,
-        #0f0f0f,
-        #1a1a1a,
         #0b0b0b,
-        #1c1c1c
+        #151515,
+        #0f0f0f,
+        #1a1a1a
       );
       background-size: 400% 400%;
-      animation: gradientBG 14s ease infinite;
+      animation: bg 14s ease infinite;
     }
 
-    @keyframes gradientBG {
+    @keyframes bg {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
     .box {
-      background: rgba(20, 20, 20, 0.75);
-      padding: 35px 45px;
-      border-radius: 14px;
+      background: rgba(15, 15, 15, 0.85);
+      padding: 40px 50px;
+      border-radius: 16px;
       text-align: center;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 0 30px rgba(0,0,0,0.6);
-      animation: fadeIn 1s ease;
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);
+      animation: fade 1s ease;
     }
 
-    @keyframes fadeIn {
+    @keyframes fade {
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 14px;
+      font-size: 28px;
       letter-spacing: 1px;
     }
 
     h2 {
+      margin: 0 0 20px;
       font-weight: normal;
-      margin-bottom: 15px;
-      opacity: 0.85;
+      opacity: 0.8;
     }
 
     input {
-      padding: 11px;
-      border-radius: 6px;
+      padding: 12px;
+      width: 220px;
+      border-radius: 8px;
       border: none;
       outline: none;
-      margin-top: 10px;
       background: #111;
       color: white;
     }
 
     button {
-      padding: 11px 18px;
-      margin-left: 6px;
-      border-radius: 6px;
+      padding: 12px 18px;
+      margin-left: 8px;
+      border-radius: 8px;
       border: none;
+      background: #eaeaea;
+      font-weight: bold;
       cursor: pointer;
-      background: #e5e5e5;
-      color: black;
-      font-weight: bold;
-    }
-
-    button:hover {
-      opacity: 0.85;
-    }
-
-    a {
-      color: #e5e5e5;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     #err {
-      margin-top: 10px;
-      color: #ff6b6b;
+      margin-top: 12px;
+      color: #ff5c5c;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- LOGIN -->
   <div class="box" id="login">
     <h1>Mohammed Shah</h1>
     <h2>Enter Password</h2>
+
     <input type="password" id="pw" placeholder="Password">
     <button onclick="check()">Enter</button>
-    <p id="err"></p>
+
+    <div id="err"></div>
   </div>
 
-  <!-- CONTENT -->
   <div class="box" id="content" style="display:none;">
     <h1>Mohammed Shah</h1>
     <p>Digital • Marketing • Tech</p>
-
-    <p>
-      <a href="https://instagram.com/YOURNAME" target="_blank">Instagram</a><br><br>
-      <a href="https://linkedin.com/in/YOURNAME" target="_blank">LinkedIn</a>
-    </p>
   </div>
 
   <script>
