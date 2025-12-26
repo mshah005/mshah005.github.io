@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Welcome</title>
   <style>
     body {
@@ -9,48 +10,100 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(120deg, #1e3c72, #2a5298);
       font-family: Arial, sans-serif;
       color: white;
+
+      background: linear-gradient(
+        -45deg,
+        #1e3c72,
+        #2a5298,
+        #0f2027,
+        #203a43,
+        #2c5364
+      );
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .box {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 30px 40px;
+      border-radius: 12px;
       text-align: center;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     input {
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 6px;
       border: none;
+      outline: none;
+      margin-top: 10px;
     }
+
     button {
-      padding: 10px 15px;
-      margin-left: 5px;
+      padding: 10px 16px;
+      margin-left: 6px;
+      border-radius: 6px;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- LOGIN -->
   <div class="box" id="login">
     <h2>Enter Password</h2>
-    <input type="password" id="pw">
+    <input type="password" id="pw" placeholder="Password">
     <button onclick="check()">Enter</button>
     <p id="err"></p>
   </div>
 
+  <!-- CONTENT -->
   <div class="box" id="content" style="display:none;">
     <h1>Mohammed</h1>
-    <p>Digital / Marketing / Tech</p>
+    <p>Digital • Marketing • Tech</p>
+
     <p>
-      <a href="https://instagram.com/YOURNAME" style="color:white;">Instagram</a><br>
-      <a href="https://linkedin.com/in/YOURNAME" style="color:white;">LinkedIn</a>
+      <a href="https://instagram.com/YOURNAME" target="_blank">Instagram</a><br><br>
+      <a href="https://linkedin.com/in/YOURNAME" target="_blank">LinkedIn</a>
     </p>
   </div>
 
   <script>
     function check() {
-      if (document.getElementById("pw").value === "1234") {
+      if (document.getElementById("pw").value === "spq") {
         document.getElementById("login").style.display = "none";
         document.getElementById("content").style.display = "block";
       } else {
@@ -58,5 +111,6 @@
       }
     }
   </script>
+
 </body>
 </html>
